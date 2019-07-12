@@ -1,0 +1,12 @@
+﻿@model List<SayMore.Models.QuestionModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<center><h2>Questions people have asked</h2></center>
+@foreach (var question in Model)
+            {
+<center> <a href="@Url.Action("ShowQuestion", new { id = question.Id })" class="list-group-item">@question.Question  </a></center>
+            }           
+            
+ 

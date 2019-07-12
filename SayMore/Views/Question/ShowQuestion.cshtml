@@ -1,0 +1,22 @@
+﻿@model SayMore.Models.QuestionModel
+
+@{
+    ViewBag.Title = "ShowQuestion";
+
+
+    <h2>@Model.UserId asked</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Model.Question</h3>
+        </div>
+        <div class="panel-body">
+            @Model.MoreInfo
+        </div>
+    </div>
+    <h2>Previos answers</h2>
+   
+}
+
+
+
+

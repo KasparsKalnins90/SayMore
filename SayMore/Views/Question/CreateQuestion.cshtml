@@ -1,0 +1,27 @@
+﻿@model SayMore.Models.QuestionModel
+@{
+    ViewBag.Title = "Questions";
+}
+@using (Html.BeginForm("CreateQuestion", "Question", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+
+<body>
+    <div>
+        <h2>Your question starts its' journey here</h2>
+        
+        <div>
+            @Html.LabelFor(q => q.Question, new { @class = "control-label center-block" })
+            @Html.TextBoxFor(q => q.Question, new { @class = "form-control center-block" })
+
+            @Html.LabelFor(q => q.MoreInfo, new { @class = "control-label center-block" })
+            @Html.TextAreaFor(q => q.MoreInfo, new { @class = "form-control center-block" })
+            @Html.HiddenFor(m => m.UserId)
+            @Html.HiddenFor(m => m.Id)
+        </div> 
+
+        <input type="submit" value="Ask!" class="center-block">
+    </div>
+        
+</body>
+
+}
